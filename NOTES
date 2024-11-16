@@ -1,0 +1,8 @@
+
+SETUP: 
+1.- install wsl (https://learn.microsoft.com/en-us/windows/wsl/install)
+2.- install java (script/install-java.sh)
+3.- download kafka 
+4.- download spark 
+
+

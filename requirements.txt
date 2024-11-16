@@ -1,0 +1,6 @@
+
+numpy==1.2
+pandas>=2.0
+matplotlib
+seaborn
+ipykernel
