@@ -13,3 +13,4 @@ conda install seaborn
 conda install jupyter 
 conda install ipykernel 
 conda install conda-forge::python-confluent-kafka
+conda install pyspark 

@@ -1,3 +1,6 @@
 
 /.venv
 /input 
+/__pycache__
+/checkpoint 
+/output
