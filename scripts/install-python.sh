@@ -14,3 +14,7 @@ conda install jupyter
 conda install ipykernel 
 conda install conda-forge::python-confluent-kafka
 conda install pyspark 
+conda install findspark 
+
+wget https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.5.3/spark-sql-kafka-0-10_2.12-3.5.3.jar
+
