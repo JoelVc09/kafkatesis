@@ -1,7 +1,3 @@
-
-# move to the kafka home
-source scripts/configure-project.sh
+KAFKA_HOME=/mnt/c/kafka/kafka_2.13-3.8.0
 cd $KAFKA_HOME
-
-# Start the ZooKeeper service
 bin/zookeeper-server-start.sh config/zookeeper.properties

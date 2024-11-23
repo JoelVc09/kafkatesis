@@ -5,6 +5,7 @@ SETUP:
 3.- download kafka 
 4.- download spark 
 
+
 SPARK_HOME=/mnt/c/spark/spark-3.5.3-bin-hadoop3
 export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/bin
 
