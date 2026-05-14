@@ -1,0 +1,34 @@
+{
+  "motor_temperature": {
+    "title": "Temperatura de motores",
+    "unit": "°C",
+    "warning_min": 50,
+    "warning_max": 78,
+    "critical_min": 40,
+    "critical_max": 88
+  },
+  "motor_vibration": {
+    "title": "Vibración de motores",
+    "unit": "mm/s",
+    "warning_min": 0,
+    "warning_max": 3.2,
+    "critical_min": 0,
+    "critical_max": 4.5
+  },
+  "voltage": {
+    "title": "Voltaje eléctrico",
+    "unit": "V",
+    "warning_min": 430,
+    "warning_max": 450,
+    "critical_min": 420,
+    "critical_max": 460
+  },
+  "oil_level": {
+    "title": "Nivel de aceite",
+    "unit": "%",
+    "warning_min": 70,
+    "warning_max": 90,
+    "critical_min": 55,
+    "critical_max": 100
+  }
+}

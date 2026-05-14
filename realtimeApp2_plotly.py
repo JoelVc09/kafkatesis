@@ -8,6 +8,10 @@ import plotly.graph_objs as go
 import json
 import time
 
+
+
+
+
 # Configurar Kafka
 TOPIC = 'water-quality'
 consumer = KafkaConsumer(

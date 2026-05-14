@@ -19,6 +19,7 @@ conda install findspark
 conda install dash 
 conda install plotly
 conda install kafka-python 
+conda install tk
 
 
 # wget https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.5.3/spark-sql-kafka-0-10_2.12-3.5.3.jar

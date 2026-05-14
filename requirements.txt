@@ -4,3 +4,6 @@ pandas>=2.0
 matplotlib
 seaborn
 ipykernel
+
+
+lsof -i :9092DDC

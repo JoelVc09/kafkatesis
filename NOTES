@@ -13,3 +13,14 @@ cd
 vi .bashrc
 source .bashrc
 
+5.- INSTALAR MINICONDA Y CREAR AMBIENTE PYTHON 
+
+#Eliminar los checkpoints
+
+0 .- INICIAR KAFKA  (ZOOKEEPER -> KAFKA )
+
+1.- CREAT TOPICO DE KAFKA 
+
+
+
+
