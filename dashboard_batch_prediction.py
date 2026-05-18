@@ -686,4 +686,4 @@ def update_dashboard(n):
 # ============================================================
 
 if __name__ == "__main__":
-    app.run_server(debug=True, port=8054)
+    app.run_server(debug=True, use_reloader=False, port=8054)
