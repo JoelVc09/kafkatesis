@@ -86,6 +86,14 @@ def start_dashboard_prediction_cmd():
     return bash(f"{CONDA_PYTHON} dashboard_batch_prediction.py")
 
 
+def start_digital_twin_stream_cmd():
+    """
+    Puente Kafka -> Server-Sent Events para DigitalTwinFlotacion.html.
+    Normalmente asociado al puerto 8765.
+    """
+    return bash(f"{CONDA_PYTHON} flotation_stream_server.py")
+
+
 # ============================================================
 # COMANDO DE LIMPIEZA TOTAL
 # ============================================================
@@ -115,9 +123,10 @@ def cleanup_cmd():
         pkill -f dashboard_process_sensors.py || true
         pkill -f dashboard_equipment_health.py || true
         pkill -f dashboard_batch_prediction.py || true
+        pkill -f flotation_stream_server.py || true
 
         echo "Liberando puertos..."
-        for port in 8050 8051 8052 8053 8054 9092 2181; do
+        for port in 8050 8051 8052 8053 8054 8765 9092 2181; do
             fuser -k $port/tcp || true
         done
 

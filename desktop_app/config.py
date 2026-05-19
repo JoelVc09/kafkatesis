@@ -18,3 +18,5 @@ KAFKA_TOPIC = "flotation-process-raw"
 DASHBOARD_PRO_URL = "http://127.0.0.1:8052"
 DASHBOARD_BASIC_URL = "http://127.0.0.1:8050"
 DASHBOARD_PREDICTION_URL = "http://127.0.0.1:8054"
+DIGITAL_TWIN_STREAM_URL = "http://127.0.0.1:8765/events"
+DIGITAL_TWIN_HTML = os.path.join(PROJECT_DIR, "DigitalTwinFlotacion.html")

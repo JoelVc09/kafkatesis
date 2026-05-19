@@ -14,6 +14,7 @@ from .commands import (
     start_dashboard_pro_cmd,
     start_dashboard_basic_cmd,
     start_dashboard_prediction_cmd,
+    start_digital_twin_stream_cmd,
     cleanup_cmd
 )
 
@@ -240,6 +241,13 @@ class FlotationControlApp:
         )
         self.dashboard_buttons["prediction"].pack(side="left", padx=(0, 12))
 
+        self.dashboard_buttons["digital_twin"] = ttk.Button(
+            buttons,
+            text="Digital Twin HTML",
+            command=self.start_digital_twin
+        )
+        self.dashboard_buttons["digital_twin"].pack(side="left", padx=(0, 12))
+
     # ========================================================
     # PANEL LOGS
     # ========================================================
@@ -287,6 +295,7 @@ class FlotationControlApp:
         self.dashboard_buttons["pro"].config(state=dash_state)
         self.dashboard_buttons["basic"].config(state=dash_state)
         self.dashboard_buttons["prediction"].config(state=dash_state)
+        self.dashboard_buttons["digital_twin"].config(state=dash_state)
 
         self.switches["producer"].config(
             state="normal" if self.status["dashboard"] else "disabled"
@@ -318,6 +327,18 @@ class FlotationControlApp:
             subprocess.Popen(["bash", "-lc", f'python3 -m webbrowser "{url}"'])
 
         self.log(f"Abriendo navegador: {url}")
+
+    def open_local_file(self, path):
+        try:
+            win_path = subprocess.check_output(
+                ["wslpath", "-w", path],
+                text=True
+            ).strip()
+            subprocess.Popen(["cmd.exe", "/c", "start", "", win_path])
+        except Exception:
+            subprocess.Popen(["bash", "-lc", f'python3 -m webbrowser "file://{path}"'])
+
+        self.log(f"Abriendo archivo: {path}")
 
     # ========================================================
     # ACCIONES DE SERVICIOS
@@ -364,6 +385,12 @@ class FlotationControlApp:
         self.status["dashboard"] = True
         self.update_states()
         self.open_browser(DASHBOARD_PREDICTION_URL)
+
+    def start_digital_twin(self):
+        self.pm.start("digital_twin_stream", start_digital_twin_stream_cmd())
+        self.status["dashboard"] = True
+        self.update_states()
+        self.open_local_file(DIGITAL_TWIN_HTML)
 
     # ========================================================
     # DETENER TODO
