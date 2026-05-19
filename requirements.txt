@@ -4,6 +4,7 @@ pandas>=2.0
 matplotlib
 seaborn
 ipykernel
+confluent-kafka
 
-
-lsof -i :9092DDC
+# Comando util para diagnosticar Kafka local:
+# lsof -i :9092
